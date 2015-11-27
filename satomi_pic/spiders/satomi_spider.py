@@ -12,8 +12,9 @@ class SatomiSpider(CrawlSpider):
 
     #download_delay=1
 
+    # from the last page to crawl to the first page
     start_urls=[
-        "http://www.kanshu.la/book/zetianji/8357143.shtml"
+        "http://www.kanshu.la/book/zetianji/8372193.html"
     ]
 
     rules=(
@@ -42,7 +43,7 @@ class SatomiSpider(CrawlSpider):
 
             content=sel.xpath('//div[@id="contentTxt"]/text()').extract()
             item['content']=[t.encode('utf-8') for t in content]
-            path='/home/church-father/Documents/zetianji2/'+response.url
+            path='/home/church-father/Documents/zetianji2/'+ss
             output1=open(path,'a')
             ss1=''
             n=0

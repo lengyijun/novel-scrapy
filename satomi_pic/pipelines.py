@@ -17,9 +17,4 @@ class SatomiPicPipeline(object):
         output.write(t)
         output.close()
         return item
-    def item_completed(self,results,item,info):
-    	path='/home/church-father/Documents/novel/new3.txt'
-        output=open(path,'a')
-        output.write(item['content'])
-        output.close()
-        return item
+
